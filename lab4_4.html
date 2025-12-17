@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Надич Наталія ПП-23</title>
+</head>
+<body>
+<script>
+"use strict";
+
+// створення масивів
+let fruits = ['apple','pineapple','mango','melon','grape'];
+let citrus = ['orange','lemon','lime'];
+
+// вивід масиву fruits
+document.write("<p>Масив fruits: " + fruits.join(", ") + "</p>");
+
+// вивід масиву citrus
+document.write("<p>Масив citrus: " + citrus.join(", ") + "</p>");
+
+// об'єднання масивів fruits та citrus
+let combined = fruits.concat(citrus);
+document.write("<p>Об'єднаний масив fruits + citrus: " + combined.join(", ") + "</p>");
+
+// вставка після mango: pear, cherry, plum, raspberry, strawberry
+let indexMango = fruits.indexOf("mango");
+if (indexMango !== -1) {
+    fruits.splice(indexMango + 1, 0, "pear", "cherry", "plum", "raspberry", "strawberry");
+}
+document.write("<p>Масив fruits після вставки нових елементів: " + fruits.join(", ") + "</p>");
+
+// видалення останніх 3 елементів
+fruits.splice(-3);
+document.write("<p>Масив fruits після видалення останніх 3 елементів: " + fruits.join(", ") + "</p>");
+
+// відсортувати масив fruits в алфавітному порядку
+let sortedFruits = [...fruits].sort();
+document.write("<p>Відсортований масив fruits (алфавіт): " + sortedFruits.join(", ") + "</p>");
+
+// вивід масиву fruits у зворотному алфавітному порядку
+let reverseFruits = [...fruits].sort().reverse();
+document.write("<p>Масив fruits у зворотному алфавітному порядку: " + reverseFruits.join(", ") + "</p>");
+
+// сортування масиву fruits за довжиною слів
+let lengthSortedFruits = [...fruits].sort((a, b) => a.length - b.length);
+document.write("<p>Масив fruits, відсортований за довжиною слів: " + lengthSortedFruits.join(", ") + "</p>");
+
+</script>
+<button onclick="location.href='index.html'">
+    Повернутися до головної сторінки
+</button>
+</body>
+</html>
