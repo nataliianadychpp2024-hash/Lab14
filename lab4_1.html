@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Надич Наталія ПП-23</title>
+</head>
+<body>
+<script>
+"use strict";
+let Treag = [];
+for (let n = 1; n <= 10; n++) {
+    Treag.push(n * (n + 1) / 2);
+}
+document.write("<p>Трикутні числа: " + Treag.join("  ") + "</p>");
+console.log("Трикутні числа:", Treag.join("  "));
+
+let kvd = [];
+for (let n = 1; n <= 10; n++) {
+    kvd.push(n * n);
+}
+document.write("<p>Квадрати чисел: " + kvd.join("  ") + "</p>");
+console.log("Квадрати чисел:", kvd.join("  "));
+
+let rez = Treag.concat(kvd);
+document.write("<p>Об'єднаний масив: " + rez.join("  ") + "</p>");
+console.log("Об'єднаний масив:", rez.join("  "));
+
+rez.sort((a, b) => b - a);
+document.write("<p>Відсортований у зворотному порядку: " + rez.join("  ") + "</p>");
+console.log("Відсортований у зворотному порядку:", rez.join("  "));
+
+</script>
+<button onclick="location.href='index.html'">
+    Повернутися до головної сторінки
+</button>
+</body>
+</html>
