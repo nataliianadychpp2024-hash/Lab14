@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Надич Наталія ПП-23</title>
+</head>
+<body>
+<script>
+"use strict";
+let arr = [];
+for (let i = 0; i < 15; i++) {
+    arr.push(Math.floor(Math.random() * 100) - 50); 
+}
+
+document.write("<p>Масив: " + arr.join("  ") + "</p>");
+console.log("Масив:", arr.join("  "));
+
+let sumPositive = 0;
+let countPositive = 0;
+
+for (let i = 1; i < arr.length; i += 2) { 
+    if (arr[i] > 0) {
+        sumPositive += arr[i];
+        countPositive++;
+    }
+}
+
+let average = countPositive > 0 ? (sumPositive / countPositive) : 0;
+document.write("<p>Середнє арифметичне додатних чисел на непарних місцях: " + average.toFixed(2) + "</p>");
+console.log("Середнє арифметичне додатних чисел на непарних місцях:", average.toFixed(2));
+
+let C = 20; 
+let product = 1;
+let smaller = false;
+
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < C) {
+        product *= arr[i];
+        smaller = true;
+    }
+}
+
+document.write("<p>Добуток чисел, менших за " + C + ": " + (smaller ? product : "немає таких чисел") + "</p>");
+console.log("Добуток чисел, менших за", C + ":", smaller ? product : "немає таких чисел");
+
+</script>
+<button onclick="location.href='index.html'">
+    Повернутися до головної сторінки
+</button>
+</body>
+</html>
